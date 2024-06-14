@@ -1,8 +1,18 @@
 import aboutImg from '../images/about.jpeg';
 import Title from './Title';
+import { motion } from 'framer-motion';
+import { slideIn } from '../utils/animations';
+
 const About = () => {
   return (
-    <section className="section" id="about">
+    <motion.section
+      className="section"
+      variants={slideIn}
+      initial="initial"
+      whileInView="animate"
+      viewport={{ once: true }}
+      id="about"
+    >
       <Title title="about" subTitle="us" />
 
       <div className="section-center about-center">
@@ -26,7 +36,7 @@ const About = () => {
           </a>
         </article>
       </div>
-    </section>
+    </motion.section>
   );
 };
 export default About;

@@ -6,7 +6,6 @@ import Services from './components/Services';
 import Tours from './components/Tours';
 
 function App() {
-  console.log('hello');
   return (
     <>
       <Navbar />

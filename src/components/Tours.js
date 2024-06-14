@@ -1,9 +1,18 @@
 import Title from './Title';
 import { tours } from '../data';
+import { motion } from 'framer-motion';
+import { slideIn } from '../utils/animations';
 
 const Tours = () => {
   return (
-    <section className="section" id="tours">
+    <motion.section
+      className="section"
+      variants={slideIn}
+      initial="initial"
+      whileInView="animate"
+      viewport={{ once: true }}
+      id="tours"
+    >
       <Title title="featured" subTitle="tours" />
 
       <div className="section-center featured-center">
@@ -36,7 +45,7 @@ const Tours = () => {
           );
         })}
       </div>
-    </section>
+    </motion.section>
   );
 };
 export default Tours;
